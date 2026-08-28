@@ -15,18 +15,31 @@
 
 Este repositório reúne uma coleção de scripts e exercícios práticos desenvolvidos em **Python**, focando na resolução de problemas matemáticos, manipulação de dados numéricos e consolidação da lógica de programação.
 
-O objetivo é manter um histórico de aprendizado contínuo cobrindo conceitos fundamentais de algoritmos como operadores aritméticos, estruturas condicionais e importação de módulos matemáticos.
-
 ---
 
-### 📂 Estrutura e Exercícios
+### 📂 Exercícios e Códigos (Clique para expandir)
 
-```text
-calculosmatematicos_python/
-└── exercicios/
-    ├── 001.py  # Média escolar e situação de aprovação
-    ├── 002.py  # Cálculo de Fatorial (com módulo math)
-    ├── 003.py  # Conversor de Temperatura (Celsius / Fahrenheit)
-    ├── 004.py  # Conversor de Unidades de Medida (distância e tempo)
-    ├── 005.py  # Cálculo de Área de Figuras Geométricas
-    └── 006.py  # Cálculo de Porcentagem
+<details>
+<summary><b>📄 001.py — Média Escolar e Situação do Aluno</b></summary>
+
+```python
+# Recebendo as notas
+n1 = float(input('Primeira nota: '))
+n2 = float(input('Segunda nota: '))
+n3 = float(input('Terceira nota: '))
+n4 = float(input('Quarta nota: '))
+
+# Cálculo Média
+media = (n1 + n2 + n3 + n4) / 4
+
+# Lógica de aprovação
+if media >= 7.0:
+    print('O aluno está APROVADO.')
+
+elif media >= 5.0:
+    print('O aluno está de RECUPERAÇÃO.')
+
+else:
+    print('O aluno está REPROVADO.')
+
+print(f'\nTirando {n1:.2f}, {n2:.2f}, {n3:.2f} e {n4:.2f}, a média do aluno é {media:.2f}')
