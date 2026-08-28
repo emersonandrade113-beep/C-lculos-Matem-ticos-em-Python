@@ -1,46 +1,20 @@
-# Biblioteca para calcular o Fatorial
-from math import factorial
+# Recebendo as notas
+n1 = float(input('Primeira nota: '))
+n2 = float(input('Segunda nota: '))
+n3 = float(input('Terceira nota: '))
+n4 = float(input('Quarta nota: '))
 
-n = int(input('Digite um número para calcular seu Fatorial:'))
+# Cálculo Média
+media = (n1 + n2 + n3 + n4) / 4
 
-# Aqui serve apenas para validar números negativos
-if n < 0:
-    print('Não existe fatorial de número negativo.')
-    
+# Lógica de aprovação
+if media >= 7.0:
+    print('O aluno está APROVADO.')
+
+elif media >= 5.0:
+    print('O aluno está de RECUPERAÇÃO.')
+
 else:
-    f = factorial(n)
-    print(f'O fatorial de {n}! é {f}')
-print('-' * 45)
-print('Conversor de temperatura')
-print('-' * 45)
+    print('O aluno está REPROVADO.')
 
-print('''Escolha a conversão: 
-[ 1 ] Celsius para Fahrenheit
-[ 2 ] Fahrenheit para Celsius''')
-
-# Escolhe qual tipo de conversão deseja
-opcao = int(input('Sua opção: '))
-
-if opcao == 1:
-    # Recebe a temperatura em Celsius
-    c = float(input('Informe a temperatura de °C: '))
-    
-    # Converte Celsius para Fahrenheit
-    f = (c * 1.8) + 32
-    
-    print(f'A temperatura de {c}°C corresponde a {f:.1f}°F!')
-
-elif opcao == 2:
-    # Recebe a temperatura em Fahrenheit
-    f = float(input('Informe a temperatura de °F: '))
-    
-    # Converte Fahrenheit para Celsius
-    c = (f - 32) / 1.8
-    
-    print(f'\nA temperatura de {f}°F corresponde a {c:.1f}°C!')
-    
-else:
-    # Caso o usuário digite uma opção inválida
-    print('Opção inválida! Tente novamente.')
-
-print('-' * 45)
+print(f'\nTirando {n1:.2f}, {n2:.2f}, {n3:.2f} e {n4:.2f}, a média do aluno é {media:.2f}')
